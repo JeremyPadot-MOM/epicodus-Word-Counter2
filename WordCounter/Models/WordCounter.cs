@@ -29,7 +29,7 @@ namespace Counter.Models
       return wordScore;
     }
 
-    public string CheckInput()
+    public bool CheckInput()
     {
       char[] checkWord = UserWord.ToCharArray();
       for (int i = 0; i < checkWord.Length; i++)
@@ -37,10 +37,10 @@ namespace Counter.Models
         bool correct = Char.IsLetter(checkWord[i]);
         if (correct == false)
         {
-          throw new System.ArgumentException("error, you must include a word to be searched");
-          break;
+          return false;
         }
       }
+        return true;
     }
   }
 }
