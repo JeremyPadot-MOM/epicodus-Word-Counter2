@@ -73,7 +73,7 @@ namespace Counter.Tests
     [TestMethod]
     public void CheckInput_CheckUserInputIsWord_CheckInput()
     {
-      string userWord = "234";
+      string userWord = "cat1";
       string userSentence = "Today I'm taking my cat to the cathedral";
       UserInput newUserInput = new UserInput(userWord, userSentence);
       
