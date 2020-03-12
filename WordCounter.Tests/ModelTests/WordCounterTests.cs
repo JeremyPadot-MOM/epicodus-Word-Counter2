@@ -71,13 +71,13 @@ namespace Counter.Tests
       Assert.AreEqual(1, score);
     }
     [TestMethod]
-    public void CheckInput_CheckUserInputIsWord_True()
+    public void CheckInput_CheckUserInputIsWord_CheckInput()
     {
       string userWord = "cat";
       string userSentence = "Today I'm taking my cat to the cathedral";
-      userInput newUserInput = new Userinput(userword, userSentence);
+      UserInput newUserInput = new UserInput(userWord, userSentence);
       
-      Assert.AreEqual(true, checkWord);
+      Assert.AreEqual(true,newUserInput.CheckInput());
     }
   }
 }
