@@ -18,13 +18,22 @@ namespace Counter.Tests
       Assert.AreEqual(typeof(UserInput), newUserInput.GetType());
     }
     [TestMethod]
-    public void InputConstructor_ApplicationCanReconizeWord_String()
+    public void InputConstructor_ApplicationCanReconizeNewUserWord_String()
     {
       string userWord = "cat";
       string userSentence = "cat";
       UserInput newUserInput = new UserInput(userWord, userSentence);
       
       Assert.AreEqual(newUserInput.UserWord, userSentence);
+    }
+    [TestMethod]
+    public void InputConstructor_ApplicationCanReconizeNewUserSentenceSentence_String()
+    {
+      string userWord = "cat";
+      string userSentence = "cat";
+      UserInput newUserInput = new UserInput(userWord, userSentence);
+      
+      Assert.AreEqual(userWord, newUserInput.UserSentence);
     }
     [TestMethod]
     public void GetScore_CalculateASingleWordScore_Int()
