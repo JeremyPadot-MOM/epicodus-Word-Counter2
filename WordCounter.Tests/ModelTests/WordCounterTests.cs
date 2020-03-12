@@ -88,5 +88,14 @@ namespace Counter.Tests
       
       Assert.AreEqual(true,newUserInput.CheckInput());
     }
+    [TestMethod]
+    public void CheckInput_CheckUserInputIsWord_False()
+    {
+      string userWord = "c1at2";
+      string userSentence = "Today I'm taking my cat to the cathedral";
+      UserInput newUserInput = new UserInput(userWord, userSentence);
+      
+      Assert.AreEqual(false,newUserInput.CheckInput());
+    }
   }
 }
