@@ -40,7 +40,7 @@ namespace Counter.Models
           return false;
         }
       }
-        return true;
+      return true;
     }
   }
 }
